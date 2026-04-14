@@ -1,0 +1,15 @@
+### GET request to retrieve users
+GET http://localhost:8080/api/users
+
+### GET request to retrieve user by id
+GET http://localhost:8080/api/users/2
+
+### POST request to create an user
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "name": "Jon",
+  "email": "jonathan.isambourg1@gmail.com",
+  "password": "1234"
+}
