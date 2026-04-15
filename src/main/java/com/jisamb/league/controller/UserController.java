@@ -5,6 +5,7 @@ import com.jisamb.league.dto.request.CreateUserRequest;
 import com.jisamb.league.dto.response.UserDTO;
 import com.jisamb.league.entity.User;
 import com.jisamb.league.service.UserService;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,7 +30,7 @@ public class UserController {
     }
 
     @PostMapping
-    public UserDTO insertUser(@RequestBody CreateUserRequest request) {
+    public UserDTO insertUser(@Validated @RequestBody CreateUserRequest request) {
         return userService.createUser(request);
     }
 }
